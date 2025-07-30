@@ -10,12 +10,12 @@ import WhatsApp from "@/components/icons/whatsapp";
 import Instagram from "@/components/icons/instagram";
 import { motion, useAnimation, useInView } from "motion/react";
 import { TypeAnimation } from "react-type-animation";
-// import { useInView } from "motion/react"
 import Image from "next/image";
 import Link from "next/link";
 
 import type { ReactNode } from "react";
 import { useRef } from "react";
+import GlassButton from "@/components/glass-button";
 
 type AnimatedSectionProps = {
   children: ReactNode;
@@ -62,9 +62,8 @@ export const AnimatedSection = ({
 export default function LatePilatesPage() {
   const prefilledMessage =
     "¡Hola! Me gustaría recibir más información sobre las clases de pilates. ¿Podrías contarme un poco más?";
-  const whatsappUrl = `https://wa.me/${
-    process.env.NEXT_PUBLIC_WSP_NUMBER
-  }?text=${encodeURIComponent(prefilledMessage)}`;
+  const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WSP_NUMBER
+    }?text=${encodeURIComponent(prefilledMessage)}`;
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-stone-50 text-stone-800 font-sans">
@@ -73,7 +72,7 @@ export default function LatePilatesPage() {
         <section className="relative h-screen w-full flex items-center justify-center text-center text-white">
           <div className="absolute inset-0 bg-black/50 z-10" />
           <Image
-            src="/placeholder.svg?height=1080&width=1920"
+            src="/image-pilates.png"
             alt="Late Pilates Studio Interior"
             layout="fill"
             objectFit="cover"
@@ -102,19 +101,25 @@ export default function LatePilatesPage() {
                 sequence={[
                   "Pilates Reformer",
                   2000,
-                  "Cuerpo y mente",
+                  "Cuerpo y mente en armonía",
                   1000,
                   "Movimiento y bienestar",
                   1000,
                   "Conciencia y equilibrio",
                   1000,
+                  "Fuerza desde el core",
+                  1000,
+                  "Flexibilidad y control",
+                  1000,
+                  "Postura y alineación",
+                  1000,
                 ]}
                 wrapper="span"
-                speed={{ type: "keyStrokeDelayInMs", value: 80 }}
+                speed={{ type: "keyStrokeDelayInMs", value: 50 }}
                 repeat={Infinity}
               />
             </p>
-            <Button
+            {/* <Button
               asChild
               size="lg"
               className="bg-mocha text-white hover:bg-mocha/90 rounded-full px-8 py-6 text-lg"
@@ -125,7 +130,8 @@ export default function LatePilatesPage() {
               >
                 Reservá tu clase
               </Link>
-            </Button>
+            </Button> */}
+            <GlassButton />
           </motion.div>
         </section>
 
@@ -332,7 +338,7 @@ export default function LatePilatesPage() {
           <div className="flex justify-center space-x-4 mb-4">
             <Link
               href={process.env.NEXT_PUBLIC_IG_URL || ""}
-              className="hover:text-white transition-colors"
+              className="hover:text-[#a47864] transition-colors text-black"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -348,7 +354,7 @@ export default function LatePilatesPage() {
             </Link>
             <Link
               href={process.env.NEXT_PUBLIC_GMAPS_URL || ""}
-              className="hover:text-white transition-colors"
+              className="hover:text-[#a47864] transition-colors text-black"
               target="_blank"
               rel="noopener noreferrer"
             >
