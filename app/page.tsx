@@ -1,73 +1,33 @@
 "use client";
 
-import type React from "react";
-
-import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
 import WhatsApp from "@/components/icons/whatsapp";
 import Instagram from "@/components/icons/instagram";
-import { motion, useAnimation, useInView } from "motion/react";
+import { motion } from "motion/react";
 import { TypeAnimation } from "react-type-animation";
 import Image from "next/image";
 import Link from "next/link";
 
-import type { ReactNode } from "react";
-import { useRef } from "react";
+import { AnimatedSection } from "@/components/animated-section";
 import GlassButton from "@/components/glass-button";
 import { NavbarDemo } from "@/components/nav-demo";
 
-type AnimatedSectionProps = {
-  children: ReactNode;
-  className?: string;
-  id?: string;
-};
 
-export const AnimatedSection = ({
-  children,
-  className,
-  id,
-}: AnimatedSectionProps) => {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once: true, amount: 0.2 }); // `amount` = threshold
-  const controls = useAnimation();
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [inView, controls]);
-
-  return (
-    <motion.section
-      ref={ref}
-      initial="hidden"
-      animate={controls}
-      variants={{
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.8, ease: "easeOut" },
-        },
-      }}
-      className={className}
-      id={id}
-    >
-      {children}
-    </motion.section>
-  );
-};
 // #a47864 mocha color
 export default function LatePilatesPage() {
   const prefilledMessage =
     "¡Hola! Me gustaría recibir más información sobre las clases de pilates. ¿Podrías contarme un poco más?";
-  const whatsappUrl = `https://wa.me/${process.env.NEXT_PUBLIC_WSP_NUMBER
-    }?text=${encodeURIComponent(prefilledMessage)}`;
+  const whatsappUrl = `https://wa.me/${
+    process.env.NEXT_PUBLIC_WSP_NUMBER
+  }?text=${encodeURIComponent(prefilledMessage)}`;
 
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-stone-50 text-stone-800 font-sans" id="hero">
+    <div
+      className="flex flex-col min-h-[100dvh] bg-stone-50 text-stone-800 font-sans"
+      id="hero"
+    >
       <NavbarDemo />
       <main className="flex-1">
         {/* Hero Section */}
@@ -93,8 +53,6 @@ export default function LatePilatesPage() {
             >
               Late
             </h1>
-
-            {/* <h1 className="text-7xl md:text-9xl font-extralight tracking-widest uppercase">Late</h1> */}
             <p
               className="text-xl md:text-2xl font-light tracking-wider select-none"
               style={{ fontFamily: "Poppins", fontWeight: "bold" }}
@@ -121,18 +79,6 @@ export default function LatePilatesPage() {
                 repeat={Infinity}
               />
             </p>
-            {/* <Button
-              asChild
-              size="lg"
-              className="bg-mocha text-white hover:bg-mocha/90 rounded-full px-8 py-6 text-lg"
-            >
-              <Link
-                href="#social"
-                style={{ fontFamily: "Poppins", fontWeight: "normal" }}
-              >
-                Reservá tu clase
-              </Link>
-            </Button> */}
             <GlassButton />
           </motion.div>
         </section>
