@@ -37,7 +37,7 @@ export function NavbarDemo() {
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody>
-                    {/* <NavbarLogo /> */}
+                    {/* NavbarLogo */}
                     <div className="flex items-center justify-between">
                         <a href="#hero" className="text-3xl font-bold text-[#a47864] z-10" style={{ fontFamily: "Waterlily" }}>
                             Late
@@ -52,7 +52,7 @@ export function NavbarDemo() {
                 {/* Mobile Navigation */}
                 <MobileNav>
                     <MobileNavHeader>
-                        {/* <NavbarLogo /> */}
+                        {/* NavbarLogo */}
                         <div className="flex items-center justify-between">
                             <a href="#hero" className="text-2xl font-bold text-[#a47864]" style={{ fontFamily: "Waterlily" }}>
                                 Late
