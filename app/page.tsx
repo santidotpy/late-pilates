@@ -5,7 +5,7 @@ import type React from "react";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Facebook, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 import WhatsApp from "@/components/icons/whatsapp";
 import Instagram from "@/components/icons/instagram";
 import { motion, useAnimation, useInView } from "motion/react";
@@ -16,6 +16,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { useRef } from "react";
 import GlassButton from "@/components/glass-button";
+import { NavbarDemo } from "@/components/nav-demo";
 
 type AnimatedSectionProps = {
   children: ReactNode;
@@ -66,7 +67,8 @@ export default function LatePilatesPage() {
     }?text=${encodeURIComponent(prefilledMessage)}`;
 
   return (
-    <div className="flex flex-col min-h-[100dvh] bg-stone-50 text-stone-800 font-sans">
+    <div className="flex flex-col min-h-[100dvh] bg-stone-50 text-stone-800 font-sans" id="hero">
+      <NavbarDemo />
       <main className="flex-1">
         {/* Hero Section */}
         <section className="relative h-screen w-full flex items-center justify-center text-center text-white">
@@ -136,7 +138,7 @@ export default function LatePilatesPage() {
         </section>
 
         {/* About Section */}
-        <AnimatedSection className="py-20 md:py-32">
+        <AnimatedSection id="about" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -180,7 +182,7 @@ export default function LatePilatesPage() {
         </AnimatedSection>
 
         {/* Location Section */}
-        <AnimatedSection className="py-20 md:py-32 bg-mocha/10">
+        <AnimatedSection id="location" className="py-20 md:py-32 bg-mocha/10">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2
@@ -227,7 +229,7 @@ export default function LatePilatesPage() {
         </AnimatedSection>
 
         {/* Gallery Section */}
-        <AnimatedSection className="py-20 md:py-32">
+        <AnimatedSection id="gallery" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2
