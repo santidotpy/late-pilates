@@ -20,10 +20,10 @@ export function NavbarDemo() {
             name: "Ubicación",
             link: "#location",
         },
-        {
-            name: "Galería",
-            link: "#gallery",
-        },
+        // {
+        //     name: "Galería",
+        //     link: "#gallery",
+        // },
         {
             name: "Contacto",
             link: "#social",

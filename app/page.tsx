@@ -175,7 +175,7 @@ export default function LatePilatesPage() {
         </AnimatedSection>
 
         {/* Gallery Section */}
-        <AnimatedSection id="gallery" className="py-20 md:py-32">
+        {/* <AnimatedSection id="gallery" className="py-20 md:py-32">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2
@@ -213,7 +213,7 @@ export default function LatePilatesPage() {
               ))}
             </div>
           </div>
-        </AnimatedSection>
+        </AnimatedSection> */}
 
         {/* Social Media & Booking Section */}
         <AnimatedSection id="social" className="py-20 md:py-32 bg-mocha/5">
