@@ -89,14 +89,14 @@ export default function LatePilatesPage() {
           >
             <h1
               style={{ fontFamily: "Waterlily", fontSize: "9rem" }}
-              className="text-9xl text-mocha"
+              className="text-9xl text-mocha select-none"
             >
               Late
             </h1>
 
             {/* <h1 className="text-7xl md:text-9xl font-extralight tracking-widest uppercase">Late</h1> */}
             <p
-              className="text-xl md:text-2xl font-light tracking-wider"
+              className="text-xl md:text-2xl font-light tracking-wider select-none"
               style={{ fontFamily: "Poppins", fontWeight: "bold" }}
             >
               <TypeAnimation
