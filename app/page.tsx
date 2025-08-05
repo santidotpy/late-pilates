@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin } from "lucide-react";
-import WhatsApp from "@/components/icons/whatsapp";
+import WhatsAppBnW from "@/components/icons/whatsapp-bnw";
 import Instagram from "@/components/icons/instagram";
 import { motion } from "motion/react";
 import { TypeAnimation } from "react-type-animation";
@@ -257,7 +257,7 @@ export default function LatePilatesPage() {
                   size="icon"
                   className="w-16 h-16 rounded-full border-mocha text-mocha hover:bg-mocha bg-transparent hover:text-mocha"
                 >
-                  <WhatsApp className="w-8 h-8" />
+                  <WhatsAppBnW className="w-8 h-8" fill="black" />
                 </Button>
               </motion.a>
               <motion.a
@@ -281,32 +281,32 @@ export default function LatePilatesPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-mocha text-stone-200 py-8">
+      <footer className="bg-[#a47864] text-stone-200 py-8">
         <div className="container mx-auto px-4 text-center">
           <div className="flex justify-center space-x-4 mb-4">
             <Link
               href={process.env.NEXT_PUBLIC_IG_URL || ""}
-              className="hover:text-[#a47864] transition-colors text-black"
+              className="transform transition-transform duration-150 hover:scale-105 active:scale-97"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Instagram className="w-6 h-6" />
+              <Instagram className="w-6 h-6 text-stone-200 hover:text-white" />
             </Link>
             <Link
-              href={process.env.NEXT_PUBLIC_WHATSAPP_URL || ""}
-              className="hover:text-white transition-colors"
+              href={whatsappUrl || ""}
+              className="transform transition-transform duration-150 hover:scale-105 active:scale-97"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <WhatsApp className="w-6 h-6" />
+              <WhatsAppBnW className="w-6 h-6 text-stone-200 hover:text-white" />
             </Link>
             <Link
               href={process.env.NEXT_PUBLIC_GMAPS_URL || ""}
-              className="hover:text-[#a47864] transition-colors text-black"
+              className="transform transition-transform duration-150 hover:scale-105 active:scale-97"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MapPin className="w-6 h-6" />
+              <MapPin className="w-6 h-6 text-stone-200 hover:text-white" />
             </Link>
           </div>
           <p className="text-sm text-stone-300">
