@@ -13,7 +13,7 @@ import Link from "next/link";
 import { AnimatedSection } from "@/components/animated-section";
 import GlassButton from "@/components/glass-button";
 import { NavbarDemo } from "@/components/nav-demo";
-
+import Rules from "@/components/rules";
 
 // #a47864 mocha color
 export default function LatePilatesPage() {
@@ -49,7 +49,7 @@ export default function LatePilatesPage() {
           >
             <h1
               style={{ fontFamily: "Waterlily", fontSize: "9rem" }}
-              className="text-9xl text-mocha select-none"
+              className="text-9xl text-mocha-50 select-none"
             >
               Late
             </h1>
@@ -84,7 +84,7 @@ export default function LatePilatesPage() {
         </section>
 
         {/* About Section */}
-        <AnimatedSection id="about" className="py-20 md:py-32">
+        <AnimatedSection id="about" className="py-20 md:py-32 bg-stone-100">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -215,6 +215,8 @@ export default function LatePilatesPage() {
           </div>
         </AnimatedSection> */}
 
+        <Rules />
+
         {/* Social Media & Booking Section */}
         <AnimatedSection id="social" className="py-20 md:py-32 bg-mocha/5">
           <div className="container mx-auto px-4 text-center">
@@ -257,7 +259,7 @@ export default function LatePilatesPage() {
                   size="icon"
                   className="w-16 h-16 rounded-full border-mocha text-mocha hover:bg-mocha bg-transparent hover:text-mocha"
                 >
-                  <WhatsAppBnW className="w-8 h-8" fill="black" />
+                  <WhatsAppBnW className="w-8 h-8" fill="#a47864" />
                 </Button>
               </motion.a>
               <motion.a

@@ -25,6 +25,10 @@ export function NavbarDemo() {
         //     link: "#gallery",
         // },
         {
+            name: "Normas",
+            link: "#rules",
+        },
+        {
             name: "Contacto",
             link: "#social",
         },

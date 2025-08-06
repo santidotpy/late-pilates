@@ -124,6 +124,7 @@
 }
 
 /* Custom Pantone Mocha Mousse color palette */
+.mocha { color: #a47864; }
 .mocha-50 { background-color: #faf9f7; }
 .mocha-100 { background-color: #f5f2ed; }
 .mocha-200 { background-color: #ebe5db; }
@@ -152,6 +153,7 @@
 .sage-500 { background-color: #8fa080; }
 
 /* Text color utilities */
+.text-mocha { color: #a47864; }
 .text-mocha-50 { color: #faf9f7; }
 .text-mocha-100 { color: #f5f2ed; }
 .text-mocha-200 { color: #ebe5db; }
