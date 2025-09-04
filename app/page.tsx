@@ -145,7 +145,7 @@ export default function LatePilatesPage() {
                     Dirección
                   </h3>
                   <p className="text-lg text-stone-600">
-                    Paso de los Andes 512, Casa 2, Mendoza, Argentina
+                    {process.env.NEXT_PUBLIC_ADDRESS}
                   </p>
                 </div>
                 <div className="space-y-2">
